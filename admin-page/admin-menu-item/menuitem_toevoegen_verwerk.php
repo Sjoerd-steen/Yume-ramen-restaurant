@@ -1,7 +1,7 @@
 <?php
 require '../../config.php';
 
-// Controleer of formulier goed is verzonden
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $naam  = $_POST["naam"];

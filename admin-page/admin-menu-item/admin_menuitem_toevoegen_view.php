@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1>Nieuw Agenda Item Toevoegen</h1>
+<h1>Nieuw menu item toevoegen</h1>
 
 <form action="menuitem_toevoegen_verwerk.php" method="POST">
 
@@ -40,7 +40,7 @@
 
     <input type="submit" value="Toevoegen">
 
-    <p><a href="../Ramen.php">← Terug naar Agenda-overzicht</a></p>
+    <p><a href="../../Ramen.php">← Terug naar Agenda-overzicht</a></p>
 
 </form>
 
