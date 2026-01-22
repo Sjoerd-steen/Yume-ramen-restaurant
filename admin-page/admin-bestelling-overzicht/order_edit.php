@@ -66,54 +66,77 @@ if (!$order) {
 }
 ?>
 
+<link rel="stylesheet" href="../../Header.css">
+<link rel="stylesheet" href="style.css">
+
+<header>
+    <div class="logo">
+        <img src="../../image/Logo.png" alt="Logo">
+    </div>
+
+    <nav class="nav-buttons">
+        <a href="recepten.html" class="header-btn">Recepten</a>
+        <a href="index.html" class="header-btn">Home</a>
+        <a href="bestel.html" class="header-btn">Bestel</a>
+    </nav>
+
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
 <h1>Order bewerken</h1>
+<div class="edit-order-box">
+    <form method="post">
+        <p>
+            <strong>Order ID:</strong>
+            <?= htmlspecialchars($order["OrderID"]) ?>
+        </p>
 
-<form method="post">
-    <p>
-        <strong>Order ID:</strong>
-        <?= htmlspecialchars($order["OrderID"]) ?>
-    </p>
+        <p>
+            <label>Orderdatum:</label><br>
+            <input type="date" name="OrderDatum"
+                   value="<?= htmlspecialchars($order["OrderDatum"]) ?>" required>
+        </p>
 
-    <p>
-        <label>Orderdatum:</label><br>
-        <input type="date" name="OrderDatum"
-               value="<?= htmlspecialchars($order["OrderDatum"]) ?>" required>
-    </p>
+        <p>
+            <label>Totaal aantal:</label><br>
+            <input type="number" name="TotalAantal"
+                   value="<?= htmlspecialchars($order["TotalAantal"]) ?>" required>
+        </p>
 
-    <p>
-        <label>Totaal aantal:</label><br>
-        <input type="number" name="TotalAantal"
-               value="<?= htmlspecialchars($order["TotalAantal"]) ?>" required>
-    </p>
+        <p>
+            <label>Status:</label><br>
+            <select name="Status" required>
+                <?php
+                $statussen = ['Pending', 'Klaarmaken', 'In bezorging'];
+                foreach ($statussen as $status) {
+                    $selected = ($order["Status"] === $status) ? 'selected' : '';
+                    echo "<option value=\"$status\" $selected>$status</option>";
+                }
+                ?>
+            </select>
+        </p>
 
-    <p>
-        <label>Status:</label><br>
-        <select name="Status" required>
-            <?php
-            $statussen = ['Pending', 'Klaarmaken', 'In bezorging'];
-            foreach ($statussen as $status) {
-                $selected = ($order["Status"] === $status) ? 'selected' : '';
-                echo "<option value=\"$status\" $selected>$status</option>";
-            }
-            ?>
-        </select>
-    </p>
+        <p>
+            <label>Bezorgmethode:</label><br>
+            <select name="BezorgMethode" required>
+                <?php
+                $methodes = ['Afhalen', 'Bezorgen'];
+                foreach ($methodes as $methode) {
+                    $selected = ($order["BezorgMethode"] === $methode) ? 'selected' : '';
+                    echo "<option value=\"$methode\" $selected>$methode</option>";
+                }
+                ?>
+            </select>
+        </p>
 
-    <p>
-        <label>Bezorgmethode:</label><br>
-        <select name="BezorgMethode" required>
-            <?php
-            $methodes = ['Afhalen', 'Bezorgen'];
-            foreach ($methodes as $methode) {
-                $selected = ($order["BezorgMethode"] === $methode) ? 'selected' : '';
-                echo "<option value=\"$methode\" $selected>$methode</option>";
-            }
-            ?>
-        </select>
-    </p>
-
-    <p>
-        <button type="submit">Opslaan</button>
-        <a href="admin_bestelling_overzicht_view.php">Annuleren</a>
-    </p>
+        <p>
+            <button type="submit">Opslaan</button>
+            <a href="admin_bestelling_overzicht_view.php">Annuleren</a>
+        </p>
+    </form>
+</div>
 </form>
