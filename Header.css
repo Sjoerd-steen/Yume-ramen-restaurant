@@ -2,18 +2,18 @@ header {
     background-color: #000000;
     padding: 20px;
     display: flex;
-    justify-content: space-between; /* Logo links, knoppen rechts */
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo img {
-    height: 50px; /* Pas de grootte van je logo aan */
+    height: 80px;
 }
 
 .nav-buttons {
     display: flex;
-    gap: 15px; /* Ruimte tussen knoppen */
+    gap: 15px;
 }
 
 .header-btn {
@@ -31,3 +31,43 @@ header {
 .header-btn:hover {
     background-color: #a33b00;
 }
+
+.hamburger {
+    display: flex !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #000;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }}
