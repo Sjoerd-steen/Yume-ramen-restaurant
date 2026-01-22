@@ -1,0 +1,33 @@
+header {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Logo links, knoppen rechts */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px; /* Pas de grootte van je logo aan */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px; /* Ruimte tussen knoppen */
+}
+
+.header-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e85000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #a33b00;
+}

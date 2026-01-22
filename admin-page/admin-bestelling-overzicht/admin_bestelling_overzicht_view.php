@@ -51,6 +51,10 @@ $resultaten = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     Details
                 </a>
                 <a href="order_edit.php?id=<?= $rij["OrderID"] ?>">Edit</a>
+                <a href="order_verwijderen.php?id=<?= $rij["OrderID"] ?>"
+                   onclick="return confirm('Weet je zeker dat je deze order wilt verwijderen?');">
+                    Verwijderen
+                </a>
 
 
             <hr>

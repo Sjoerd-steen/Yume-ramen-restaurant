@@ -2,14 +2,14 @@
 require("../../config.php");
 session_start();
 
-/* Check of er een ID is meegegeven */
+
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die("Ongeldig order ID");
 }
 
 $orderID = (int) $_GET['id'];
 
-/* Haal 1 order op */
+
 $sql = "
 SELECT 
     OrderID,
@@ -28,7 +28,7 @@ $stmt->execute();
 
 $order = $stmt->fetch(PDO::FETCH_ASSOC);
 
-/* Bestaat de order? */
+
 if (!$order) {
     die("Order niet gevonden");
 }
