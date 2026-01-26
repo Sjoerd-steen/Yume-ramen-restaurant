@@ -1,0 +1,81 @@
+
+header {
+    background-color: #000;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 15px 0px 50px -9px rgba(0,0,0,0.85);
+    position: relative;
+    z-index: 100;
+}
+
+.logo img {
+    height: 80px;
+}
+
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e85000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #a33b00;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* ====================== */
+/* Responsive Styling     */
+/* ====================== */
+@media (max-width: 768px) {
+    /* Navigatie verdwijnt op mobiel */
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px; /* net onder de header */
+        right: 20px;
+        background-color: #000;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    /* Active class toont menu */
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    /* Hamburger zichtbaar op mobiel */
+    .hamburger {
+        display: flex;
+    }
+}

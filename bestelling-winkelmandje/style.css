@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b8560b;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.orders-container {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 20px;
+}
+
+.order-card {
+    background-color: transparent;
+    border: 2px solid #f2b300;
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.order-card p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.order-card strong {
+    color: #f2b300;
+}
+
+.order-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.order-actions a {
+    background-color: #d87a00;
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.order-actions a:hover {
+    background-color: #f2b300;
+}
+
+.order-card:last-child {
+    background-color: #f2b300;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.order-card:last-child h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.order-card:last-child .order-actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-card:last-child .order-actions a {
+    background-color: #000;
+    color: #f2b300;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.order-card:last-child .order-actions a:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #c66a00;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .orders-container {
+        grid-template-columns: 1fr;
+    }
+
+    .order-card:last-child {
+        margin-top: 30px;
+    }
+}
