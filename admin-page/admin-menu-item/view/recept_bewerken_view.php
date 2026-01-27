@@ -30,7 +30,7 @@
     <input type="text" id="ImageURL" name="ImageURL" value="<?=$rij['ImageURL']?>" required><br>
 
     <label for="Price">Prijs:</label>
-    <input type="number" id="Price" name="Einddatum" value="<?=$rij['Price']?>" required><br>
+    <input type="number" id="Price" name="Price" value="<?=$rij['Price']?>" required><br>
 
 
     <button type="submit">Aanpassen</button>

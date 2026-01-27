@@ -26,7 +26,7 @@ if ($aantalRijen > 0) { ?>
                 <strong>Acties</strong>
                 <a href="recept.php?ID<?=$rij['ID']?>">overzicht</a>
                 <a href="recept_detail.php?ID=<?=$rij['ID']?>">Details</a>
-                <a href="agenda_bewerken.php?ID=<?=$rij['ID']?>">Bewerken</a>
+                <a href="recept_bewerken.php?ID=<?=$rij['ID']?>">Bewerken</a>
                 <a href="verwijder.php?ID=<?=$rij['ID']?>">Verwijder</a>
             </li>
             <hr>
