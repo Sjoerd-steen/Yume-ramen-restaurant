@@ -1,8 +1,7 @@
-/* Afbeeldingen klein en gecropped */
 li img {
     width: 20px;
     height: 20px;
-    object-fit: cover; /* vult het vakje en knipt alles buiten */
-    display: inline-block; /* voorkomt dat het een block wordt */
-    vertical-align: middle; /* optioneel: netjes uitlijnen met tekst */
+    object-fit: cover; /* crop de afbeelding netjes */
+    display: block;    /* belangrijk voor object-fit */
 }
+
