@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4f515727-b609-476c-802d-ac9ed24e334a" name="ramen" url="http://101759.stu.sd-lab.nl/Beroeps/Beroeps_Yume_Ramen">
+        <fileTransfer rootFolder="/httpdocs/Beroeps/Beroeps_Yume_Ramen" host="web03.sd-lab.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

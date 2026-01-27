@@ -25,7 +25,10 @@ if ($aantalRijen > 0) { ?>
                 <strong>Acties</strong>
                 <a href="recept.php?ID<?=$rij['ID']?>">overzicht</a>
                 <a href="recept_detail.php?ID=<?=$rij['ID']?>">Details</a>
-                <a>Toevoegen</a>
+                <form method="post" action="toevoegen.php">
+                    <input type="hidden" name="ID" value="<?= $rij['ID'] ?>">
+                    <button type="submit">Toevoegen</button>
+                </form>
             </li>
             <hr>
         <?php } ?>
