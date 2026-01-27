@@ -65,8 +65,8 @@ foreach ($cart as $item) {
     </div>
     <nav class="nav-buttons">
         <a href="../../index.html" class="header-btn">Home</a>
-        <a href="../recepten.html" class="header-btn">Recepten</a>
-        <a href="winkelmandje.php" class="header-btn">Winkelmandje</a>
+        <a href="../klant_recept/recept.php" class="header-btn">Recepten</a>
+        <a href="winkelmandje_verwerk_view.php" class="header-btn">Winkelmandje</a>
     </nav>
     <div class="hamburger">
         <div></div>
@@ -115,6 +115,10 @@ foreach ($cart as $item) {
     </form>
 <?php else: ?>
     <p style="text-align:center;">Je winkelmandje is leeg.</p>
+    <div class="button-container">
+        <a href="../klant_recept/recept.php" class="recepten-btn">Recepten</a>
+    </div>
+
 <?php endif; ?>
 
 <script>
