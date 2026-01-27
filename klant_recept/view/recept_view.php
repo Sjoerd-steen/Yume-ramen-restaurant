@@ -19,10 +19,7 @@ if ($aantalRijen > 0) { ?>
                 <p><strong>Naam:</strong> <?= htmlspecialchars($rij["Naam"]) ?></p>
                 <p><strong>Beschrijving:</strong> <?= htmlspecialchars($rij["Beschrijving"]) ?></p>
                 <p><strong>Categorie:</strong> <?= htmlspecialchars($rij["Category"]) ?></p>
-                <p>
-                    <strong>Foto:</strong><br>
-                    <img src="<?= htmlspecialchars($rij["ImageURL"]) ?>" alt="foto" width="200">
-                </p>
+                <img src="<?= htmlspecialchars($rij["ImageURL"]) ?>">
                 <p><strong>Prijs:</strong> <?= htmlspecialchars($rij["Price"]) ?></p>
 
                 <strong>Acties</strong>
