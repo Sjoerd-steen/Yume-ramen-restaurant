@@ -10,6 +10,7 @@
 </head>
 <body>
 <h1>Recepten - Klant</h1>
+<a href="../bestelling-winkelmandje/winkelmandje_verwerk_view.php">Winkelmandje</a>
 
 <?php
 if ($aantalRijen > 0) { ?>
