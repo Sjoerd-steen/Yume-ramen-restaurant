@@ -2,14 +2,13 @@
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require 'config.php';
+require '../config.php';
 
 
 try{
     $query = "SELECT * FROM MenuItem";
     $stmt = $conn->prepare($query);
     $stmt -> execute();
-
 
     $resultaten = $stmt -> fetchAll();
     $aantalRijen = count($resultaten);

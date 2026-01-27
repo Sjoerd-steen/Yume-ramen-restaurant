@@ -1,6 +1,6 @@
 <?php
 // Voeg de database-verbinding toe
-require 'config.php';
+require '../../config.php';
 
 
 $resultaat = '';

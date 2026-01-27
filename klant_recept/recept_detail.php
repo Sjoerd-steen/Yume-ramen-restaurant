@@ -1,12 +1,11 @@
 <?php
-require './config.php';
+require '../config.php';
 
 
 //lees het ID uit de URL
 $ID = $_GET['ID'];
 //toon het id op het scherm
-echo "ID: " . $ID . "
-";
+
 
 try {
     $query = "SELECT * FROM MenuItem where ID = :ID";

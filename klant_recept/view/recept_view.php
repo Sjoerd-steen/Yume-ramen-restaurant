@@ -25,6 +25,7 @@ if ($aantalRijen > 0) { ?>
                 <strong>Acties</strong>
                 <a href="recept.php?ID<?=$rij['ID']?>">overzicht</a>
                 <a href="recept_detail.php?ID=<?=$rij['ID']?>">Details</a>
+                <a>Toevoegen</a>
             </li>
             <hr>
         <?php } ?>
@@ -32,6 +33,5 @@ if ($aantalRijen > 0) { ?>
 <?php } else { ?>
     <p>Geen resultaten gevonden</p>
 <?php } ?>
-<a href="recept_toevoegen_verwerk.php" class="knop-toevoegen">toevoegen</a>
 </body>
 </html>
