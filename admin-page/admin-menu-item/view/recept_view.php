@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/agenda_view.css">
+    <link rel="stylesheet" href="recept.css">
 </head>
 <body>
 <h1>Recepten - Admin</h1>
@@ -19,7 +19,7 @@ if ($aantalRijen > 0) { ?>
                 <p><strong>Naam:</strong> <?= htmlspecialchars($rij["Naam"]) ?></p>
                 <p><strong>Beschrijving:</strong> <?= htmlspecialchars($rij["Beschrijving"]) ?></p>
                 <p><strong>Categorie:</strong> <?= htmlspecialchars($rij["Category"]) ?></p>
-                <p><strong>foto:</strong> <?= htmlspecialchars($rij["ImageURL"]) ?></p>
+                <img src="<?= htmlspecialchars($rij["ImageURL"]) ?>">
                 <p><strong>Prijs:</strong> <?= htmlspecialchars($rij["Price"]) ?></p>
 
 
