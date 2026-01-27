@@ -1,109 +1,218 @@
-* {
-    box-sizing: border-box;
+/* ========================= */
+/* Algemene styling           */
+/* ========================= */
+body {
+    background-color: #8a3f0f;
+    font-family: Arial, sans-serif;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: #b8560b;
-    font-family: Arial, sans-serif;
+h1 {
+    text-align: center;
+    margin-top: 30px;
     color: #fff;
 }
 
+/* ========================= */
+/* Header                     */
+/* ========================= */
+header {
+    background-color: #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 15px 0px 50px -9px rgba(0,0,0,0.85);
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e85000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #a33b00;
+}
+
+/* Hamburger menu (mobiel) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* ========================= */
+/* Orders overzicht pagina   */
+/* ========================= */
 .orders-container {
-    max-width: 1000px;
-    margin: 0 auto 50px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
 }
 
 .order-card {
-    background-color: transparent;
-    border: 2px solid #f2b300;
-    border-radius: 25px;
-    padding: 25px;
-    margin-bottom: 20px;
+    background-color: #4e1f00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.order-card p {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.order-card strong {
-    color: #f2b300;
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 .order-actions {
+    margin-top: 15px;
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.order-actions a {
-    background-color: #d87a00;
-    color: #000;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.order-actions a:hover {
-    background-color: #f2b300;
-}
-
-.order-card:last-child {
-    background-color: #f2b300;
-    color: #000;
-    border: none;
-    border-radius: 30px;
-    text-align: center;
-}
-
-.order-card:last-child h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.order-card:last-child .order-actions {
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.order-card:last-child .order-actions a {
-    background-color: #000;
-    color: #f2b300;
-    padding: 12px;
-    border-radius: 25px;
-}
-
-.order-card:last-child .order-actions a:hover {
-    background-color: #333;
-}
-
-footer {
-    background-color: #c66a00;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-footer a {
+.order-actions button {
+    padding: 10px 20px;
+    background-color: #e85000;
     color: #fff;
-    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-@media (max-width: 900px) {
+.order-actions button:hover {
+    background-color: #a33b00;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Quantity input styling     */
+/* ========================= */
+input[type="number"] {
+    width: 60px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #7b3a0a;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    background-color: #9b4512;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Bezorgmethode select box   */
+/* ========================= */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7b3a0a;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+select:focus {
+    outline: none;
+    background-color: #9b4512;
+    transform: scale(1.02);
+}
+
+/* ========================= */
+/* Responsive styling        */
+/* ========================= */
+@media (max-width: 1024px) {
     .orders-container {
-        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
     }
 
-    .order-card:last-child {
-        margin-top: 30px;
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #000;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    .order-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .header-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .orders-container {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .order-actions button {
+        width: 100%;
+        text-align: center;
     }
 }
