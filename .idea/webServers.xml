@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="7e96ff93-eb27-4984-959c-7bb63954921e" name="Ramen" url="https://101759.stu.sd-lab.nl/Beroeps/Beroeps_Yume_Ramen">
-        <fileTransfer rootFolder="/httpdocs/Beroeps/Beroeps_ramen" host="web03.sd-lab.nl" port="21">
+      <webServer id="68eabff6-00dc-4878-ad48-ba15e348e14e" name="ramen" url="https://101756.stu.sd-lab.nl">
+        <fileTransfer rootFolder="/httpdocs/beroeps/Ramen" host="web03.sd-lab.nl" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
