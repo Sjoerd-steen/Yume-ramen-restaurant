@@ -1,8 +1,13 @@
 <?php
+session_start();
 require '../../config.php';
 
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: ../../inlog/inlog.php');
+    exit;
+}
 
-$ID = $_GET['ID'];
+$ID = $_GET['ID'] ?? null;
 try {
     $query = 'DELETE FROM MenuItem WHERE  ID = :ID';
     $stmt = $conn->prepare($query);

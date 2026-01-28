@@ -1,0 +1,132 @@
+/* ========================= */
+/* Inlog & Registratie       */
+/* ========================= */
+body {
+    background-color: #8a3f0f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.login-box,
+.registreer-box {
+    background-color: #4e1f00;
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+}
+
+.login-box h2,
+.registreer-box h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #ffdd99;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #ffdd99;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #7b3a0a;
+    color: #fff;
+}
+
+.form-group input::placeholder {
+    color: #ccaa77;
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: #9b4512;
+}
+
+.inlog-actions,
+.registreer-actions {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inlog-actions button,
+.registreer-actions button {
+    padding: 12px 20px;
+    background-color: #e85000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.inlog-actions button:hover,
+.registreer-actions button:hover {
+    background-color: #a33b00;
+    transform: scale(1.02);
+}
+
+.login-link,
+.registreer-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a,
+.registreer-link a {
+    color: #ffcc66;
+    text-decoration: none;
+}
+
+.login-link a:hover,
+.registreer-link a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    background-color: #2d5a27;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+    .login-box,
+    .registreer-box {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}

@@ -1,8 +1,11 @@
 <?php
-require("../../config.php");
 session_start();
+require("../../config.php");
 
-
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: ../../inlog/inlog.php');
+    exit;
+}
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die("Ongeldig order ID");
@@ -71,15 +74,16 @@ if (!$order) {
 
 <header>
     <div class="logo">
-        <img src="../../image/Logo.png" alt="Logo">
+        <a href="../../Ramen.php"><img src="../../image/Logo.png" alt="Logo"></a>
     </div>
-
     <nav class="nav-buttons">
-        <a href="recepten.html" class="header-btn">Recepten</a>
-        <a href="index.html" class="header-btn">Home</a>
-        <a href="bestel.html" class="header-btn">Bestel</a>
+        <a href="../../Ramen.php" class="header-btn">Home</a>
+        <a href="../../klant_recept/recept.php" class="header-btn">Recepten</a>
+        <a href="../../bestelling-winkelmandje/winkelmandje_verwerk_view.php" class="header-btn">Winkelmandje</a>
+        <a href="admin_bestelling_overzicht_view.php" class="header-btn">Bestellingen</a>
+        <a href="../admin-menu-item/recept.php" class="header-btn">Menu beheer</a>
+        <a href="../../inlog/uitloggen.php" class="header-btn">Uitloggen (<?= htmlspecialchars($_SESSION['naam'] ?? '') ?>)</a>
     </nav>
-
     <div class="hamburger">
         <div></div>
         <div></div>

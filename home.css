@@ -1,0 +1,54 @@
+/* ========================= */
+/* Homepage                  */
+/* ========================= */
+body {
+    background-color: #8a3f0f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.home-welcome {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.home-links a {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #e85000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.home-links a:hover {
+    background-color: #a33b00;
+    transform: scale(1.05);
+}
+
+.home-admin { border-left: 4px solid #ffcc00; }
+.home-klant { border-left: 4px solid #2ecc71; }

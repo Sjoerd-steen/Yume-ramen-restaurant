@@ -12,7 +12,7 @@
         <img src="image/Logo.png" alt="Logo">
     </div>
     <nav class="nav-buttons">
-        <a href="../../index.html" class="header-btn">Home</a>
+        <a href="../Ramen.php" class="header-btn">Home</a>
         <a href="../klant_recept/recept.php" class="header-btn">Recepten</a>
         <a href="winkelmandje_verwerk_view.php" class="header-btn">Winkelmandje</a>
     </nav>

@@ -1,6 +1,11 @@
 <?php
-
+session_start();
 require '../../config.php';
+
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: ../../inlog/inlog.php');
+    exit;
+}
 
 try {
     $resultaat = "";

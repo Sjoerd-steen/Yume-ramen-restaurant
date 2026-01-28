@@ -64,9 +64,15 @@ foreach ($cart as $item) {
         <img src="image/Logo.png" alt="Logo">
     </div>
     <nav class="nav-buttons">
-        <a href="../../index.html" class="header-btn">Home</a>
+        <a href="../Ramen.php" class="header-btn">Home</a>
         <a href="../klant_recept/recept.php" class="header-btn">Recepten</a>
         <a href="winkelmandje_verwerk_view.php" class="header-btn">Winkelmandje</a>
+        <?php if (isset($_SESSION['klant_id'])): ?>
+            <a href="../inlog/uitloggen.php" class="header-btn">Uitloggen (<?= htmlspecialchars($_SESSION['naam'] ?? '') ?>)</a>
+        <?php else: ?>
+            <a href="../inlog/inlog.php" class="header-btn">Inloggen</a>
+            <a href="../inlog/registreren.php" class="header-btn">Registreren</a>
+        <?php endif; ?>
     </nav>
     <div class="hamburger">
         <div></div>
