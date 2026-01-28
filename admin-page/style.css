@@ -1,0 +1,270 @@
+/* ========================= */
+/* Algemene styling           */
+/* ========================= */
+body {
+    background-color: #8a3f0f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+/* ========================= */
+/* Header                     */
+/* ========================= */
+header {
+    background-color: #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 15px 0px 50px -9px rgba(0,0,0,0.85);
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e85000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #a33b00;
+}
+
+/* Hamburger menu (mobiel) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* ========================= */
+/* Orders overzicht pagina   */
+/* ========================= */
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.order-card {
+    background-color: #4e1f00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.order-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.order-actions a {
+    padding: 8px 15px;
+    background-color: #e85000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.order-actions a:hover {
+    background-color: #a33b00;
+}
+
+.edit-order-box {
+    background-color: #4e1f00;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.edit-order-box p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.edit-order-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #ffdd99;
+}
+
+.edit-order-box input,
+.edit-order-box select {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #7b3a0a;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-order-box input:focus,
+.edit-order-box select:focus {
+    outline: none;
+    background-color: #9b4512;
+    transform: scale(1.02);
+}
+
+.edit-order-box button {
+    background-color: #e85000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 10px;
+}
+
+.edit-order-box button:hover {
+    background-color: #a33b00;
+    transform: scale(1.05);
+}
+
+.edit-order-box a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-order-box a:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Order detail pagina       */
+/* ========================= */
+.order-details-box {
+    background-color: #4e1f00;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.order-details-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.order-details-box strong {
+    color: #ffdd99;
+}
+
+/* ========================= */
+/* Responsive styling        */
+/* ========================= */
+@media (max-width: 1024px) {
+    .orders-container, .order-details-box {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #000;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    .order-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .header-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .orders-container, .order-details-box {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .order-actions a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}

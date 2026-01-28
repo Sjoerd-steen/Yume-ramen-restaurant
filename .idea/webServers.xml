@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="7e96ff93-eb27-4984-959c-7bb63954921e" name="Ramen" url="https://101759.stu.sd-lab.nl/Beroeps/Beroeps_Yume_Ramen">
-        <fileTransfer rootFolder="/httpdocs/Beroeps/Beroeps_Yume_Ramen" host="web03.sd-lab.nl" port="21">
+        <fileTransfer rootFolder="/httpdocs/Beroeps/Beroeps_ramen" host="web03.sd-lab.nl" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

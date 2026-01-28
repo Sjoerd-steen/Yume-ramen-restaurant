@@ -6,8 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="recept.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
+<header>
+    <div class="logo">
+        <img src="../../image/Logo.png" alt="Logo">
+    </div>
+
+    <nav class="nav-buttons">
+        <a href="../../klant_recept/recept.php" class="header-btn">Recepten</a>
+        <a href="index.html" class="header-btn">Home</a>
+        <a href="../../bestelling-winkelmandje/winkelmandje_verwerk_view.php" class="header-btn">Bestel</a>
+    </nav>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
 <body>
 <h1>Recepten - Admin</h1>
 

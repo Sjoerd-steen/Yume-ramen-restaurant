@@ -1,7 +1,0 @@
-li img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover; /* crop de afbeelding netjes */
-    display: block;    /* belangrijk voor object-fit */
-}
-
