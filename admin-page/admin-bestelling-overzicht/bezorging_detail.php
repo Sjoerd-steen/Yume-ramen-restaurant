@@ -18,6 +18,7 @@ SELECT
     OrderID,
     OrderDatum,
     TotalAantal,
+    Bestelling,
     Status,
     BezorgMethode
 FROM GeplaatseOrder
@@ -63,7 +64,8 @@ if (!$order) {
     <p><strong>Order ID:</strong> <?= htmlspecialchars($order["OrderID"]) ?></p>
     <p><strong>Orderdatum:</strong> <?= htmlspecialchars($order["OrderDatum"]) ?></p>
     <p><strong>Totaal aantal:</strong> <?= htmlspecialchars($order["TotalAantal"]) ?></p>
-    <p><strong>Status:</strong> <?= htmlspecialchars($order["Status"]) ?></p>
+    <p><strong>De bestelling:</strong> <?= htmlspecialchars($order["TotalAantal"]) ?></p>
+    <p><strong>Status:</strong> <?= htmlspecialchars($order["Bestelling"]) ?></p>
     <p><strong>Bezorgmethode:</strong> <?= htmlspecialchars($order["BezorgMethode"]) ?></p>
 
     <div class="order-actions">
